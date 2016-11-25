@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/favicon.ico">
+  <title>Tasks - Assessory</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Tasks";
+    var mkdocs_page_input_path = "tasks.md";
+    var mkdocs_page_url = "/tasks/";
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href=".." class="icon icon-home"> Assessory</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="..">Home</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../studio/">Studio-style critiques</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../code/">Source & contributing</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../groups/">Groups</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Tasks</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#tasks">Tasks</a></li>
+                
+                    <li><a class="toctree-l4" href="#simple-tasks">Simple tasks</a></li>
+                
+                    <li><a class="toctree-l4" href="#critique-tasks">Critique tasks</a></li>
+                
+                    <li><a class="toctree-l4" href="#event-tasks">Event tasks</a></li>
+                
+                    <li><a class="toctree-l4" href="#dashboard-tasks">Dashboard tasks</a></li>
+                
+            
+            </ul>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../status/">Status</a>
+        
+    </li>
+<li>
+          
+            <li>
+    <li class="toctree-l1 ">
+        <a class="" href="../setup/">Getting started</a>
+        
+    </li>
+<li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="..">Assessory</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Tasks</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="tasks">Tasks</h1>
+<p>Tasks are things that students (or groups of students) are asked to do. 
+We're trying to build Assessory using some very simple, but composable task types. </p>
+<p>We're going to add a few unusual ones, such as "comment on three GitHub tickets" but those are still in progress.</p>
+<h2 id="simple-tasks">Simple tasks</h2>
+<p>Because most of the use of Assessory is around students <em>responding</em> to each other, the submission tasks are very
+rudimentary:</p>
+<ul>
+<li>Questionnaire -- a simple form answering Yes/No or free-text questions.</li>
+<li>Video -- a form for posting a video. Currently, a link to a YouTube video </li>
+<li>Weblink -- a link to a page, such as a group's Wiki page</li>
+</ul>
+<h2 id="critique-tasks">Critique tasks</h2>
+<p>A critique is a response to <em>something</em>. At the moment, that something can be:</p>
+<ul>
+<li>a group</li>
+<li>a submission for another task</li>
+</ul>
+<p>The task can be individual or in groups, and there are a couple of allocaion mechanisms:</p>
+<ul>
+<li>Allocate - dynamically allocates a number of things to critique.  </li>
+<li>OfMy - looks up all the items that are about the student or their group. For example, show me all critiques of my group.</li>
+</ul>
+<p>The body of the task -- what the student has to submit -- is then one of the simple task types (a questionnaire or a video)</p>
+<p>This lets us chain together critique processes. </p>
+<h2 id="event-tasks">Event tasks</h2>
+<p>Coming soon. </p>
+<p>These tasks listen to an external sytem's API and watch for particular kinds of event.</p>
+<p>For example, a task might be "comment on three other group's GitHub issues". Assessory will need to listen to the 
+GitHub API to know when a student has done this.</p>
+<h2 id="dashboard-tasks">Dashboard tasks</h2>
+<p>Coming soon. </p>
+<p>These tasks listen to the students' work as they develop it over term. For example, for software it might use the
+GitHub API, but for another class it might listen for Wiki contributions, or DropBox edits to a document.</p>
+<p>Unlike the "event" task, it does not complete. Instead, it charts the students' progress against their groups' 
+progress, and the groups' progress against the class's progress. In this way, students can glance at how they
+are going compared to the rest of the class, rather than only seeing the "noisiest" contributions.</p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../status/" class="btn btn-neutral float-right" title="Status">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../groups/" class="btn btn-neutral" title="Groups"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+	  
+        </div>
+      </div>
+
+    </section>
+    
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../groups/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../status/" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script src="../js/theme.js"></script>
+
+</body>
+</html>

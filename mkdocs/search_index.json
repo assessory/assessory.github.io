@@ -1,0 +1,149 @@
+{
+    "docs": [
+        {
+            "location": "/", 
+            "text": "Assessory\n\n\nAssessory is an open source tool for smart and social assessment. \nWe're starting by supporting \"studio-style\" critique processes, but will expand from there.\n\n\nIt connects to Moodle and other LMSs via LTI, and can also link to some social accounts (primarily GitHub) via OAuth.\n\n\nWhere possible, we support the use of third party services. For example, we find it is often easier for students\nto share a video to YouTube and submit the link than to submit a video file directly. \n\n\nThe project was started by \nWill Billingsley\n at NICTA, for use in a software\nstudio course at \nThe University of Queensland\n, \nand is being further developed by Will at the \nUnversity of New England\n.\nIt is open source under an MIT licence.\n\n\nStatus\n\n\nHaving prototyped and iterated on the system in five courses at two universities for a few years, we're now trying to \nregularise Assessory -- turn it into a proper open source product that other universities can download and use.\n\n\nIn the mean-time, if you would like to use it, send Will an email: wbilling@une.edu.au", 
+            "title": "Home"
+        }, 
+        {
+            "location": "/#assessory", 
+            "text": "Assessory is an open source tool for smart and social assessment. \nWe're starting by supporting \"studio-style\" critique processes, but will expand from there.  It connects to Moodle and other LMSs via LTI, and can also link to some social accounts (primarily GitHub) via OAuth.  Where possible, we support the use of third party services. For example, we find it is often easier for students\nto share a video to YouTube and submit the link than to submit a video file directly.   The project was started by  Will Billingsley  at NICTA, for use in a software\nstudio course at  The University of Queensland , \nand is being further developed by Will at the  Unversity of New England .\nIt is open source under an MIT licence.", 
+            "title": "Assessory"
+        }, 
+        {
+            "location": "/#status", 
+            "text": "Having prototyped and iterated on the system in five courses at two universities for a few years, we're now trying to \nregularise Assessory -- turn it into a proper open source product that other universities can download and use.  In the mean-time, if you would like to use it, send Will an email: wbilling@une.edu.au", 
+            "title": "Status"
+        }, 
+        {
+            "location": "/studio/", 
+            "text": "Studio-style critiques\n\n\nStudio models of teaching are based off the ideas of design and architecture studios. \nStudents, or groups of students, work on realistic creative projects, and there are several different projects going on\nin the class at any one time. Periodically, students are asked present their work in progess, and \nother students are asked to offer their critiques and advice. \nIn this way, students get to see a broader set of projects than just their own, and share and learn from each others'\nexperiences in the class.\n\n\nAssessory tries to support this for distance education and large(ish) classes by helping run the process online.\n\n\nWhen we've run critiques in classes, we've found every class and every teacher wants to do them slightly differently.\nFor example whether the first step is uploading a video, a portfolio to link, or just a presentation in class. And whether\nthe critiques are text, video, or forms. Whether the critiques are allocated ahead of time so students know which \npresentations to pay attention to in large classes, or dynamically so that students who submit their presentation videos\nlate can still get some reviews. So we're building the system around a fairly flexible task model. \n\n\nExample: UQ DECO2800\n\n\nUQ's DECO2800 is a software development studio course with a fairly large class (approx 200 students). Let's describe\nthe 2015 version - \n\n\nThe students work in groups on features for a shared project. There are four tutorial classes, each with around 50 \nstudents and around twelve groups. Periodically through the term, the groups are asked to present their progress.\n\n\nThese used a two-stage critique:\n\n\n\n\nEach student in the tutorial is allocated (ahead of time) three groups to critique. The critiques were text\n\n\nEach group is asked to review their critiques -- read them and mark them against a simple form, as well as saying how\n   they plan to use the advice.\n\n\n\n\nExample: UNE COSC220\n\n\nUNE has a similar software studio, except it runs online, and the critiques are done via video. \n\n\n\n\neach project group submits a video of their work so far\n\n\neach student in the same tutorial session is allocated three videos to critique from the ones submitted so far. \n   The critiques are also recorded as videos.\n\n\neach student (individually) is asked to watch back their critiques of their group and mark whether they were objective \n helpful.\n\n\n\n\nGetting the data out\n\n\nAssessory gives you the data as a simple csv so you can open it in your favourite spreadsheet. \nFor example a reverse critique (a simple form where Aice marks whether Bob's critique was objective, useful, helpful, etc, might come out as:\n\n\nAlice Student, alice@student.example, Bob Pupil, bob@student.example, TRUE, TRUE, FALSE, TRUE,\nBob's advice was great; I'm planning on using the design he suggested for a magufffin widget\n\n\n\n\n\nEntries where a student has opened the form but not submitted it will appear as blank rows:\n\n\nAlice Student, alice@student.example, Bob Pupil, bob@student.example, , , , , , \n\n\n\n\nEntries where the student has never even opened the form will be missing. So if a student has fewer entries than you asked\nthem to complete, that means they never even opened the form for those critiques.\n\n\nGetting videos out\n\n\nVideos appear as their links in the spreadsheet. We use \nyoutube-dl\n to download them\nfor safekeeping. In a later release, we'll build that in as a service.\n\n\nWhy not store the videos in Assessory itself? Lots of students record the videos on their smartphones. This means that\nfor them, the easiest way to submit a video is to share it via the sharing options that are already in their phone's\ngallery app, and post in the link. Rather than us giving them yet another blasted app to install just so they can compress\nand submit videos for that one course they're doing this term...\n\n\nWe do recognise that universities will want students to be able to submit videos to university servers instead of the \npublic cloud, but we're guessing that is more likely to be through Kaltura or some other specialised video hosting service. \n\n\nWe'd love to hear how you would like video submission to work for your course...", 
+            "title": "Studio-style critiques"
+        }, 
+        {
+            "location": "/studio/#studio-style-critiques", 
+            "text": "Studio models of teaching are based off the ideas of design and architecture studios. \nStudents, or groups of students, work on realistic creative projects, and there are several different projects going on\nin the class at any one time. Periodically, students are asked present their work in progess, and \nother students are asked to offer their critiques and advice. \nIn this way, students get to see a broader set of projects than just their own, and share and learn from each others'\nexperiences in the class.  Assessory tries to support this for distance education and large(ish) classes by helping run the process online.  When we've run critiques in classes, we've found every class and every teacher wants to do them slightly differently.\nFor example whether the first step is uploading a video, a portfolio to link, or just a presentation in class. And whether\nthe critiques are text, video, or forms. Whether the critiques are allocated ahead of time so students know which \npresentations to pay attention to in large classes, or dynamically so that students who submit their presentation videos\nlate can still get some reviews. So we're building the system around a fairly flexible task model.", 
+            "title": "Studio-style critiques"
+        }, 
+        {
+            "location": "/studio/#example-uq-deco2800", 
+            "text": "UQ's DECO2800 is a software development studio course with a fairly large class (approx 200 students). Let's describe\nthe 2015 version -   The students work in groups on features for a shared project. There are four tutorial classes, each with around 50 \nstudents and around twelve groups. Periodically through the term, the groups are asked to present their progress.  These used a two-stage critique:   Each student in the tutorial is allocated (ahead of time) three groups to critique. The critiques were text  Each group is asked to review their critiques -- read them and mark them against a simple form, as well as saying how\n   they plan to use the advice.", 
+            "title": "Example: UQ DECO2800"
+        }, 
+        {
+            "location": "/studio/#example-une-cosc220", 
+            "text": "UNE has a similar software studio, except it runs online, and the critiques are done via video.    each project group submits a video of their work so far  each student in the same tutorial session is allocated three videos to critique from the ones submitted so far. \n   The critiques are also recorded as videos.  each student (individually) is asked to watch back their critiques of their group and mark whether they were objective   helpful.", 
+            "title": "Example: UNE COSC220"
+        }, 
+        {
+            "location": "/studio/#getting-the-data-out", 
+            "text": "Assessory gives you the data as a simple csv so you can open it in your favourite spreadsheet. \nFor example a reverse critique (a simple form where Aice marks whether Bob's critique was objective, useful, helpful, etc, might come out as:  Alice Student, alice@student.example, Bob Pupil, bob@student.example, TRUE, TRUE, FALSE, TRUE, Bob's advice was great; I'm planning on using the design he suggested for a magufffin widget   Entries where a student has opened the form but not submitted it will appear as blank rows:  Alice Student, alice@student.example, Bob Pupil, bob@student.example, , , , , ,   Entries where the student has never even opened the form will be missing. So if a student has fewer entries than you asked\nthem to complete, that means they never even opened the form for those critiques.", 
+            "title": "Getting the data out"
+        }, 
+        {
+            "location": "/studio/#getting-videos-out", 
+            "text": "Videos appear as their links in the spreadsheet. We use  youtube-dl  to download them\nfor safekeeping. In a later release, we'll build that in as a service.  Why not store the videos in Assessory itself? Lots of students record the videos on their smartphones. This means that\nfor them, the easiest way to submit a video is to share it via the sharing options that are already in their phone's\ngallery app, and post in the link. Rather than us giving them yet another blasted app to install just so they can compress\nand submit videos for that one course they're doing this term...  We do recognise that universities will want students to be able to submit videos to university servers instead of the \npublic cloud, but we're guessing that is more likely to be through Kaltura or some other specialised video hosting service.   We'd love to hear how you would like video submission to work for your course...", 
+            "title": "Getting videos out"
+        }, 
+        {
+            "location": "/code/", 
+            "text": "Source\n\n\nAssessory is open source, under the \nMIT Licence\n. \nThe source-code is \navailable on GitHub\n\n\nTech stack\n\n\nAssessory is built using\n\n\n\n\nScala and Scala.js as the programming language\n\n\nReact.js (via \nscalajs-react\n) for the UI\n\n\nPlay Framework\n for the server\n\n\nMongoDB\n for the database\n\n\n\n\nThis keeps it all fairly compact, performant, and makes it less likely to break even though the coding is done\nsporadically. \n\n\nHistory\n\n\nThe very first version was built at \nNICTA\n for use in a 200-student software studio class \nat the University of Queensland. In 2015, Will moved to the University of New England and found he needed it even \nmore for online classes.", 
+            "title": "Source & contributing"
+        }, 
+        {
+            "location": "/code/#source", 
+            "text": "Assessory is open source, under the  MIT Licence . \nThe source-code is  available on GitHub", 
+            "title": "Source"
+        }, 
+        {
+            "location": "/code/#tech-stack", 
+            "text": "Assessory is built using   Scala and Scala.js as the programming language  React.js (via  scalajs-react ) for the UI  Play Framework  for the server  MongoDB  for the database   This keeps it all fairly compact, performant, and makes it less likely to break even though the coding is done\nsporadically.", 
+            "title": "Tech stack"
+        }, 
+        {
+            "location": "/code/#history", 
+            "text": "The very first version was built at  NICTA  for use in a 200-student software studio class \nat the University of Queensland. In 2015, Will moved to the University of New England and found he needed it even \nmore for online classes.", 
+            "title": "History"
+        }, 
+        {
+            "location": "/groups/", 
+            "text": "Groups and Group Sets\n\n\nSuppose you had a 200-student software development class, where you want the students to work in groups of four \non a project. For room-scheduling reasons, the class might also have four tutorial groups of fifty students each.\nIf you wanted to the project groups to present their work for critique, you would probably want students to critique\nother projects in the same tutorial group. (Or at least, that's how UQ's DECO2800 class works)\n\n\nGroup Sets\n\n\nA group set is a kind of group. For example, there might be \nproject groups\n and \ntutorial groups\n. \nA group set can have a parent group set. For example, in DECO2800, each project group belongs to a tutorial group.\n\n\nGroups\n\n\nThese are the actual groups of students. For example \nProject Group Foo\n might have Alice, Bob, and Charlie.\nAt the moment, groups are set up from a CSV.", 
+            "title": "Groups"
+        }, 
+        {
+            "location": "/groups/#groups-and-group-sets", 
+            "text": "Suppose you had a 200-student software development class, where you want the students to work in groups of four \non a project. For room-scheduling reasons, the class might also have four tutorial groups of fifty students each.\nIf you wanted to the project groups to present their work for critique, you would probably want students to critique\nother projects in the same tutorial group. (Or at least, that's how UQ's DECO2800 class works)", 
+            "title": "Groups and Group Sets"
+        }, 
+        {
+            "location": "/groups/#group-sets", 
+            "text": "A group set is a kind of group. For example, there might be  project groups  and  tutorial groups . \nA group set can have a parent group set. For example, in DECO2800, each project group belongs to a tutorial group.", 
+            "title": "Group Sets"
+        }, 
+        {
+            "location": "/groups/#groups", 
+            "text": "These are the actual groups of students. For example  Project Group Foo  might have Alice, Bob, and Charlie.\nAt the moment, groups are set up from a CSV.", 
+            "title": "Groups"
+        }, 
+        {
+            "location": "/tasks/", 
+            "text": "Tasks\n\n\nTasks are things that students (or groups of students) are asked to do. \nWe're trying to build Assessory using some very simple, but composable task types. \n\n\nWe're going to add a few unusual ones, such as \"comment on three GitHub tickets\" but those are still in progress.\n\n\nSimple tasks\n\n\nBecause most of the use of Assessory is around students \nresponding\n to each other, the submission tasks are very\nrudimentary:\n\n\n\n\nQuestionnaire -- a simple form answering Yes/No or free-text questions.\n\n\nVideo -- a form for posting a video. Currently, a link to a YouTube video \n\n\nWeblink -- a link to a page, such as a group's Wiki page\n\n\n\n\nCritique tasks\n\n\nA critique is a response to \nsomething\n. At the moment, that something can be:\n\n\n\n\na group\n\n\na submission for another task\n\n\n\n\nThe task can be individual or in groups, and there are a couple of allocaion mechanisms:\n\n\n\n\nAllocate - dynamically allocates a number of things to critique.  \n\n\nOfMy - looks up all the items that are about the student or their group. For example, show me all critiques of my group.\n\n\n\n\nThe body of the task -- what the student has to submit -- is then one of the simple task types (a questionnaire or a video)\n\n\nThis lets us chain together critique processes. \n\n\nEvent tasks\n\n\nComing soon. \n\n\nThese tasks listen to an external sytem's API and watch for particular kinds of event.\n\n\nFor example, a task might be \"comment on three other group's GitHub issues\". Assessory will need to listen to the \nGitHub API to know when a student has done this.\n\n\nDashboard tasks\n\n\nComing soon. \n\n\nThese tasks listen to the students' work as they develop it over term. For example, for software it might use the\nGitHub API, but for another class it might listen for Wiki contributions, or DropBox edits to a document.\n\n\nUnlike the \"event\" task, it does not complete. Instead, it charts the students' progress against their groups' \nprogress, and the groups' progress against the class's progress. In this way, students can glance at how they\nare going compared to the rest of the class, rather than only seeing the \"noisiest\" contributions.", 
+            "title": "Tasks"
+        }, 
+        {
+            "location": "/tasks/#tasks", 
+            "text": "Tasks are things that students (or groups of students) are asked to do. \nWe're trying to build Assessory using some very simple, but composable task types.   We're going to add a few unusual ones, such as \"comment on three GitHub tickets\" but those are still in progress.", 
+            "title": "Tasks"
+        }, 
+        {
+            "location": "/tasks/#simple-tasks", 
+            "text": "Because most of the use of Assessory is around students  responding  to each other, the submission tasks are very\nrudimentary:   Questionnaire -- a simple form answering Yes/No or free-text questions.  Video -- a form for posting a video. Currently, a link to a YouTube video   Weblink -- a link to a page, such as a group's Wiki page", 
+            "title": "Simple tasks"
+        }, 
+        {
+            "location": "/tasks/#critique-tasks", 
+            "text": "A critique is a response to  something . At the moment, that something can be:   a group  a submission for another task   The task can be individual or in groups, and there are a couple of allocaion mechanisms:   Allocate - dynamically allocates a number of things to critique.    OfMy - looks up all the items that are about the student or their group. For example, show me all critiques of my group.   The body of the task -- what the student has to submit -- is then one of the simple task types (a questionnaire or a video)  This lets us chain together critique processes.", 
+            "title": "Critique tasks"
+        }, 
+        {
+            "location": "/tasks/#event-tasks", 
+            "text": "Coming soon.   These tasks listen to an external sytem's API and watch for particular kinds of event.  For example, a task might be \"comment on three other group's GitHub issues\". Assessory will need to listen to the \nGitHub API to know when a student has done this.", 
+            "title": "Event tasks"
+        }, 
+        {
+            "location": "/tasks/#dashboard-tasks", 
+            "text": "Coming soon.   These tasks listen to the students' work as they develop it over term. For example, for software it might use the\nGitHub API, but for another class it might listen for Wiki contributions, or DropBox edits to a document.  Unlike the \"event\" task, it does not complete. Instead, it charts the students' progress against their groups' \nprogress, and the groups' progress against the class's progress. In this way, students can glance at how they\nare going compared to the rest of the class, rather than only seeing the \"noisiest\" contributions.", 
+            "title": "Dashboard tasks"
+        }, 
+        {
+            "location": "/status/", 
+            "text": "Status\n\n\nWe've been using Assessory in courses at UNE and UQ for a few years.\n\n\nThat said, there are still some things we need to do:\n\n\nConfig\n\n\nThe big one is we haven't created the config screens yet! (We've been running a little script to poke tasks into the\ndatabase. Ok for us, but not terribly friendly)", 
+            "title": "Status"
+        }, 
+        {
+            "location": "/status/#status", 
+            "text": "We've been using Assessory in courses at UNE and UQ for a few years.  That said, there are still some things we need to do:", 
+            "title": "Status"
+        }, 
+        {
+            "location": "/status/#config", 
+            "text": "The big one is we haven't created the config screens yet! (We've been running a little script to poke tasks into the\ndatabase. Ok for us, but not terribly friendly)", 
+            "title": "Config"
+        }, 
+        {
+            "location": "/setup/", 
+            "text": "Getting started\n\n\nWe're busily writing a better way for you to get your class set up in Assessory. If you'd like to use Assessory in \nyour class email Will and let us know when your class starts.\n(We've run a few classes where we've set up the class for you)\n\n\nPlanned set-up mechanisms\n\n\nWe're going to try to make 2 different set-up mechanisms work:\n\n\n\n\nTypical forms-based set up. Click \"create class\" and configure away...\n\n\nSet up from an HJSON file. Because you shouldn't need to click through a form to configure your class manually every year.", 
+            "title": "Getting started"
+        }, 
+        {
+            "location": "/setup/#getting-started", 
+            "text": "We're busily writing a better way for you to get your class set up in Assessory. If you'd like to use Assessory in \nyour class email Will and let us know when your class starts.\n(We've run a few classes where we've set up the class for you)", 
+            "title": "Getting started"
+        }, 
+        {
+            "location": "/setup/#planned-set-up-mechanisms", 
+            "text": "We're going to try to make 2 different set-up mechanisms work:   Typical forms-based set up. Click \"create class\" and configure away...  Set up from an HJSON file. Because you shouldn't need to click through a form to configure your class manually every year.", 
+            "title": "Planned set-up mechanisms"
+        }
+    ]
+}
